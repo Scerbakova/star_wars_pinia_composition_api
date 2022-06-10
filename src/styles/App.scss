@@ -7,3 +7,22 @@ body {
   color: beige;
   font-family: 'Cherry Cream Soda', cursive;
 }
+
+.card__wrapper {
+  border: 2px solid white;
+  margin: 30px;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.title {
+  color: yellowgreen;
+}
+
+.entry {
+  color: rgb(100, 180, 169);
+}
+
+.input {
+  margin: 30px
+}

@@ -4,15 +4,23 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <header class="header">
-    <div class="row end-xs">
-      <nav class="navigation col-xs-12">
-        <RouterLink class="link" to="/">Home</RouterLink>
-        <RouterLink class="link" to="/about">About</RouterLink>
-        <RouterLink class="link" to="/people">People</RouterLink>
-        <RouterLink class="link" to="/films">Films</RouterLink>
-        <RouterLink class="link" to="/planets">Planets</RouterLink>
-      </nav>
-    </div>
+    <nav class="row end-xs">
+      <RouterLink class="link col-xs-6 col-sm-4 col-md-2 col-lg-1" to="/"
+        >Home</RouterLink
+      >
+      <RouterLink class="link col-xs-6 col-sm-4 col-md-2 col-lg-1" to="/about"
+        >About</RouterLink
+      >
+      <RouterLink class="link col-xs-6 col-sm-4 col-md-2 col-lg-1" to="/people"
+        >People</RouterLink
+      >
+      <RouterLink class="link col-xs-6 col-sm-4 col-md-2 col-lg-1" to="/films"
+        >Films</RouterLink
+      >
+      <RouterLink class="link col-xs-6 col-sm-4 col-md-2 col-lg-1" to="/planets"
+        >Planets</RouterLink
+      >
+    </nav>
   </header>
 
   <RouterView />
@@ -26,7 +34,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 .link {
   color: rgb(235, 217, 217);
-  margin-right: 20px;
+  margin: 35px;
 }
 
 .navigation .link.router-link-exact-active {
