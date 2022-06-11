@@ -35,7 +35,7 @@ mapActions(usePeopleStore, ["fetchPeople", "fetchPeopleByName"]);
         placeholder="enter name"
         type="text"
       />
-      <button>Search</button>
+      <button class="button">Search</button>
     </form>
   </div>
   <main class="row center-xs">

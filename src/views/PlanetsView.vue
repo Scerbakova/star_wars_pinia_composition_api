@@ -41,7 +41,10 @@ mapActions(usePlanetsStore, ["fetchPlanets"]);
         </div>
         <div><span class="entry"> climate:</span> {{ planet.climate }}</div>
         <div>
-          <button @click="$router.push(`/planets/${planet.url.match(/\d+/)}`)">
+          <button
+            class="button"
+            @click="$router.push(`/planets/${planet.url.match(/\d+/)}`)"
+          >
             See More
           </button>
         </div>

@@ -85,8 +85,10 @@ const climateChange = computed(() => {
 <template>
   <div>
     <div class="row center-xs">
-      <button class="col-xs-2" @click="$router.push('/')">Back To Earth</button>
-      <button class="col-xs-2" @click="$router.push('/planets')">
+      <button class="button col-xs-2" @click="$router.push('/')">
+        Back To Earth
+      </button>
+      <button class="button col-xs-2" @click="$router.push('/planets')">
         All Planets
       </button>
     </div>
@@ -117,7 +119,7 @@ const climateChange = computed(() => {
             <span class="entry">orbital_period:</span>
             {{ planet.orbital_period }}
           </div>
-          <button @click="setImage">View Image</button>
+          <button class="button" @click="setImage">View Image</button>
           <div class="row center-xs">
             <div
               :style="{
