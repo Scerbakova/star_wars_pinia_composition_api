@@ -29,6 +29,11 @@ const router = createRouter({
       name: "planets",
       component: () => import("../views/PlanetsView.vue"),
     },
+    {
+      path: "/planets/:num",
+      name: "planet",
+      component: () => import("../views/SinglePlanetView.vue"),
+    },
   ],
 });
 

@@ -8,17 +8,6 @@ import LoaderComponent from "../components/LoaderComponent.vue";
 
 const order = ref("");
 
-// const ordered = watch(
-//   () => order,
-//   (newOrder, oldOrder) => {
-//     if (newOrder.value === "ID") {
-//       films.value.sort((a, b) => a.episode_id - b.episode_id);
-//     } else if (newOrder.value === "Release Date") {
-//       useFilmsStore().fetchFilms();
-//     }
-//   }
-// );
-
 const ordered = () => {
   if (order.value === "ID increasing") {
     films.value.sort((a, b) => a.episode_id - b.episode_id);
