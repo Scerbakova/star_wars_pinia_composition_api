@@ -20,24 +20,30 @@ const order = ref("");
 // );
 
 const ordered = () => {
-  if (order.value === "ID") {
+  if (order.value === "ID increasing") {
     films.value.sort((a, b) => a.episode_id - b.episode_id);
-  } else if (order.value === "Release Date") {
-    useFilmsStore().fetchFilms();
+  } else if (order.value === "ID descending") {
+    films.value.sort((a, b) => b.episode_id - a.episode_id);
+  } else if (order.value === "Date descending") {
+    films.value.sort(
+      (a, b) =>
+        +b.release_date.split("").splice(0, 4).join("") -
+        +a.release_date.split("").splice(0, 4).join("")
+    );
+  } else if (order.value === "Date increasing") {
+    films.value.sort(
+      (a, b) =>
+        +a.release_date.split("").splice(0, 4).join("") -
+        +b.release_date.split("").splice(0, 4).join("")
+    );
   }
 };
-
-// const name = "";
 
 const { loading } = storeToRefs(useFilmsStore());
 
 const films = computed(() => {
   return useFilmsStore().getFilms;
 });
-
-// const search = (name: string) => {
-//   return useFilmsStore().fetchPeopleByName(name);
-// };
 
 onMounted(() => {
   useFilmsStore().fetchFilms();
@@ -48,12 +54,14 @@ mapActions(useFilmsStore, ["fetchFilms"]);
 </script>
 
 <template>
-  <div class="row">
+  <div class="row center-xs">
     <form class="col-xs-12" @submit.prevent>
-      <select @change="ordered" class="select" v-model="order">
+      <select class="select" @change="ordered" v-model="order">
         <option disabled value="">Choose order</option>
-        <option value="ID">ID</option>
-        <option value="Release Date">Release Date</option>
+        <option value="ID descending">ID descending order</option>
+        <option value="ID increasing">ID increasing order</option>
+        <option value="Date descending">Release Date descending order</option>
+        <option value="Date increasing">Release Date increasing order</option>
       </select>
     </form>
   </div>

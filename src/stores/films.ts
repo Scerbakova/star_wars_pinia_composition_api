@@ -35,7 +35,10 @@ export const useFilmsStore = defineStore("films", {
       this.loading = true;
       try {
         const response = await axios.get("https://swapi.dev/api/films");
-        this.films = response.data.results;
+        this.films = response.data.results.sort(
+          (a: { episode_id: number }, b: { episode_id: number }) =>
+            b.episode_id - a.episode_id
+        );
       } catch (error) {
         alert(error);
       } finally {

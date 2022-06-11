@@ -27,7 +27,7 @@ mapActions(usePeopleStore, ["fetchPeople", "fetchPeopleByName"]);
 </script>
 
 <template>
-  <div class="rowc center-xs">
+  <div class="row center-xs">
     <form class="col-xs-12" @submit.prevent="search(name), (name = '')">
       <input
         class="input"
