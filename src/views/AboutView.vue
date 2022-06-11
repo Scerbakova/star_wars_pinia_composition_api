@@ -1,6 +1,6 @@
 <template>
   <div class="row center-xs about">
-    <h1>This is an about page</h1>
+    <h1 class="title">Learn more about Star Wars</h1>
     <div class="video">
       <iframe
         class="vid"

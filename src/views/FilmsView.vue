@@ -65,7 +65,7 @@ mapActions(useFilmsStore, ["fetchFilms"]);
       :key="film.title"
     >
       <div>
-        <h2 class="title">
+        <h2 class="subtitle">
           <span class="entry"> title:</span> {{ film.title }}
         </h2>
         <div><span class="entry"> episode:</span> {{ film.episode_id }}</div>

@@ -27,6 +27,7 @@ const setImage = () => {
   image.value = true;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 watch(image, (newImage: boolean, oldImage: boolean) => {
   return newImage;
 });
@@ -95,7 +96,7 @@ const climateChange = computed(() => {
       </div>
       <div v-else class="card__wrapper col-xs-6">
         <div>
-          <h2 class="title">
+          <h2 class="subtitle">
             <span class="entry">name:</span> {{ planet.name }}
           </h2>
           <div><span class="entry">climate:</span> {{ planet.climate }}</div>
@@ -146,41 +147,5 @@ const climateChange = computed(() => {
 </template>
 
 <style lang="scss">
-.image {
-  margin: 50px;
-  padding: 20px;
-  box-shadow: 0px -20px 50px 20px;
-  position: relative;
-}
-.image {
-  animation-delay: -0.3s;
-  animation-duration: 10s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-name: myframes;
-  animation-timing-function: ease-in-out;
-}
-@keyframes myframes {
-  0% {
-    transform: rotate(120deg);
-  }
-  50% {
-    transform: translatey(10%);
-  }
-  75% {
-    transform: translatex(35%);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.climate {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
+@import "@/styles/Planet.scss";
 </style>

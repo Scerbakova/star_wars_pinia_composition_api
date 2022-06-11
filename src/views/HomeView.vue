@@ -4,7 +4,7 @@
   <main>
     <div class="row center-xs">
       <div class="col-xs-12">
-        <h1>Welcome to</h1>
+        <h1 class="title">Welcome to</h1>
         <div>
           <img src="../../public/1200px-Star_wars2.svg.png" alt="" />
         </div>

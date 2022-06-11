@@ -32,7 +32,7 @@ mapActions(usePlanetsStore, ["fetchPlanets"]);
       :key="planet.name"
     >
       <div>
-        <h2 class="title">
+        <h2 class="subtitle">
           <span class="entry"> name:</span> {{ planet.name }}
         </h2>
         <div>
