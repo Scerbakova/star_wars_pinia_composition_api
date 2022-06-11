@@ -73,6 +73,11 @@ mapActions(useFilmsStore, ["fetchFilms"]);
           <span class="entry"> release date:</span> {{ film.release_date }}
         </div>
         <div><span class="entry"> url:</span> {{ film.url }}</div>
+        <div><span class="entry"> producers:</span> {{ film.producer }}</div>
+        <div><span class="entry"> director:</span> {{ film.director }}</div>
+        <div>
+          <span class="entry"> opening crawl:</span> {{ film.opening_crawl }}
+        </div>
       </div>
     </div>
   </main>

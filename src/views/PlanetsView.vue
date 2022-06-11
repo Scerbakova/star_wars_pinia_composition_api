@@ -40,6 +40,7 @@ mapActions(usePlanetsStore, ["fetchPlanets"]);
           {{ planet.rotation_period }}
         </div>
         <div><span class="entry"> climate:</span> {{ planet.climate }}</div>
+        <div><span class="entry"> gravity:</span> {{ planet.gravity }}</div>
         <div>
           <button
             class="button"

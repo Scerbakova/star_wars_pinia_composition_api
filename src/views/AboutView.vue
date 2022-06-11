@@ -19,7 +19,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 40%;
+  padding-top: 33%;
 }
 
 .vid {

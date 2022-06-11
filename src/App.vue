@@ -30,6 +30,8 @@ import { RouterLink, RouterView } from "vue-router";
 @import "../src/styles/App.scss";
 .header {
   margin: 20px;
+  background: url(../public/stars-space.gif);
+  border-radius: 16px;
 }
 
 .link {

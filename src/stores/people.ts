@@ -45,7 +45,7 @@ export const usePeopleStore = defineStore("people", {
       }
     },
     async fetchPeopleByName(name: string) {
-      this.loading = true
+      this.loading = true;
       try {
         const response = await axios.get(
           `https://swapi.dev/api/people/?search=${name}`

@@ -49,7 +49,7 @@ mapActions(usePeopleStore, ["fetchPeople", "fetchPeopleByName"]);
       :key="person.name"
     >
       <div>
-        <h2 class="title">
+        <h2 class="subtitle">
           <span class="entry"> name:</span> {{ person.name }}
         </h2>
         <div>
@@ -59,7 +59,41 @@ mapActions(usePeopleStore, ["fetchPeople", "fetchPeopleByName"]);
         <div>
           <span class="entry"> hair color:</span> {{ person.hair_color }}
         </div>
+        <div><span class="entry"> gender:</span> {{ person.gender }}</div>
+        <div><span class="entry"> mass:</span> {{ person.mass }}</div>
+        <div>
+          <span class="entry"> skin color:</span> {{ person.skin_color }}
+        </div>
       </div>
     </div>
   </main>
+  <!-- <main class="row center-xs">
+    <div v-if="loading">
+      <LoaderComponent />
+    </div>
+    <div
+      v-else
+      class="card__wrapper col-xs-12 col-md-3"
+      v-for="person in people"
+      :key="person.name"
+    >
+      <div>
+        <h2 class="subtitle">
+          <span class="entry"> name:</span> {{ person.name }}
+        </h2>
+        <div>
+          <span class="entry"> birth year:</span> {{ person.birth_year }}
+        </div>
+        <div><span class="entry"> eye color:</span> {{ person.eye_color }}</div>
+        <div>
+          <span class="entry"> hair color:</span> {{ person.hair_color }}
+        </div>
+        <div><span class="entry"> gender:</span> {{ person.gender }}</div>
+        <div><span class="entry"> mass:</span> {{ person.mass }}</div>
+        <div>
+          <span class="entry"> skin color:</span> {{ person.skin_color }}
+        </div>
+      </div>
+    </div>
+  </main> -->
 </template>

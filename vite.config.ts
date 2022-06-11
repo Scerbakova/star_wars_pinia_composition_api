@@ -6,6 +6,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/star_wars_pinia_composition_api/",
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
