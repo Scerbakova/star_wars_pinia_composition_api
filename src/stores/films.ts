@@ -23,6 +23,7 @@ export type FilmsData = [
 export const useFilmsStore = defineStore("films", {
   state: () => ({
     films: [{}] as FilmsData,
+    loading: false,
   }),
   getters: {
     getFilms(state) {
@@ -31,24 +32,15 @@ export const useFilmsStore = defineStore("films", {
   },
   actions: {
     async fetchFilms() {
+      this.loading = true;
       try {
         const response = await axios.get("https://swapi.dev/api/films");
         this.films = response.data.results;
-        console.log(this.films);
       } catch (error) {
         alert(error);
+      } finally {
+        this.loading = false;
       }
     },
-    // async fetchPeopleByName(name: string) {
-    //   try {
-    //     const response = await axios.get(
-    //       `https://swapi.dev/api/people/?search=${name}`
-    //     );
-    //     this.people = response.data.results;
-    //     console.log(this.people);
-    //   } catch (error) {
-    //     alert(error);
-    //   }
-    // },
   },
 });

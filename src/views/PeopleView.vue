@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { usePeopleStore } from "@/stores/people";
-import { mapActions, mapState } from "pinia";
+import { mapActions, mapState, storeToRefs } from "pinia";
 import { onMounted, computed } from "vue";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
+import LoaderComponent from "../components/LoaderComponent.vue";
+
+const { loading } = storeToRefs(usePeopleStore());
 
 const name = "";
 
@@ -34,7 +39,11 @@ mapActions(usePeopleStore, ["fetchPeople", "fetchPeopleByName"]);
     </form>
   </div>
   <main class="row center-xs">
+    <div v-if="loading">
+      <LoaderComponent />
+    </div>
     <div
+      v-else
       class="card__wrapper col-xs-12 col-md-3"
       v-for="person in people"
       :key="person.name"

@@ -25,6 +25,7 @@ export type PeopleData = [
 export const usePeopleStore = defineStore("people", {
   state: () => ({
     people: [{}] as PeopleData,
+    loading: false,
   }),
   getters: {
     getPeople(state) {
@@ -33,23 +34,27 @@ export const usePeopleStore = defineStore("people", {
   },
   actions: {
     async fetchPeople() {
+      this.loading = true;
       try {
         const response = await axios.get("https://swapi.dev/api/people");
         this.people = response.data.results;
-        console.log(this.people);
       } catch (error) {
         alert(error);
+      } finally {
+        this.loading = false;
       }
     },
     async fetchPeopleByName(name: string) {
+      this.loading = true
       try {
         const response = await axios.get(
           `https://swapi.dev/api/people/?search=${name}`
         );
         this.people = response.data.results;
-        console.log(this.people);
       } catch (error) {
         alert(error);
+      } finally {
+        this.loading = false;
       }
     },
   },
