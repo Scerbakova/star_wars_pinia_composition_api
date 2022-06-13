@@ -9,7 +9,7 @@ import LoaderComponent from "../components/LoaderComponent.vue";
 const order = ref("");
 
 const ordered = () => {
-  if (order.value === "ID increasing") {
+  if (order.value === "ID ascending") {
     films.value.sort((a, b) => a.episode_id - b.episode_id);
   } else if (order.value === "ID descending") {
     films.value.sort((a, b) => b.episode_id - a.episode_id);
@@ -19,7 +19,7 @@ const ordered = () => {
         +b.release_date.split("").splice(0, 4).join("") -
         +a.release_date.split("").splice(0, 4).join("")
     );
-  } else if (order.value === "Date increasing") {
+  } else if (order.value === "Date ascending") {
     films.value.sort(
       (a, b) =>
         +a.release_date.split("").splice(0, 4).join("") -
@@ -48,9 +48,9 @@ mapActions(useFilmsStore, ["fetchFilms"]);
       <select class="select" @change="ordered" v-model="order">
         <option disabled value="">Choose order</option>
         <option value="ID descending">ID descending order</option>
-        <option value="ID increasing">ID increasing order</option>
+        <option value="ID ascending">ID ascending order</option>
         <option value="Date descending">Release Date descending order</option>
-        <option value="Date increasing">Release Date increasing order</option>
+        <option value="Date ascending">Release Date ascending order</option>
       </select>
     </form>
   </div>
