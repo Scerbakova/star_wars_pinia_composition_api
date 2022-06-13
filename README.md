@@ -1,46 +1,16 @@
-# star_wars_pinia_composition_api
+Star Wars API
+Vite
+Vue
+Composition api
+Pinia
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a project based on Star Wars API, it has home page, about page with video about Star Wars timeline, People page with people cards and a possipility to search a person by name. Films page contains cards with films' info and a select, where you can sort films by id and release date, descending and increasing order. Planet page with planet cards. There is a buttom "See more" at every card which redirects to the planet page, where there is more info about the planet and an animated div as an image of planet which is styled according to planet data.
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![image](https://user-images.githubusercontent.com/97510856/173205760-108e6f70-abcd-4c83-8241-6cbf5b3d2c94.png)
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+![image](https://user-images.githubusercontent.com/97510856/173205775-7aa14f60-b112-4036-856b-c1a9bc83a07b.png)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+![image](https://user-images.githubusercontent.com/97510856/173205788-056cf0b2-8d33-49d0-a0cf-1d3da43c09e9.png)
